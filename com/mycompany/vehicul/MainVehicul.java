@@ -228,5 +228,13 @@ public class MainVehicul {
     v4.salveazaInFisier();
     //COD Panaite Cristian Florin
 
+    //Neacsu Ionut
+    Trotineta[] trotinete=new Trotineta[3];
+trotinete[0]= new Trotineta ("Myiria",1200,60,(byte) 50);
+trotinete[1]= new Trotineta("Kukirin",2000,100,(byte) 70);
+trotinete[2]= new Trotineta("Xiaomi",1700,150,(byte) 65);
+
+Trotineta.salveazaInFisier(trotinete, "trotinete.txt");
+
     
 }

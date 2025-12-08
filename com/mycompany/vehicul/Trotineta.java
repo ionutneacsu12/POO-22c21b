@@ -80,6 +80,29 @@ public class Trotineta extends Vehicul implements Reincarcabil{
 
     }
 
+    //Neacsu Ionut
+public static void salveazaInFisier(Trotineta[] trotinete, String numeFisier) {
+    try (PrintWriter pw = new PrintWriter(new FileWriter(numeFisier, true))) {
+
+        for (Trotineta t : trotinete) {
+            if (t != null) {
+                pw.println(
+                        t.marca + ";" +
+                        t.getPret() + ";" +
+                        t.capacitateBaterie + ";" +
+                        t.autonomieAcumulator
+                );
+            }
+        }
+
+        System.out.println("Trotinetele au fost salvate in fisierul: " + numeFisier);
+
+    } catch (IOException e) {
+        System.out.println("Eroare la salvarea in fisier: " + e.getMessage());
+    }
+}
+
+
 
 //Cod Niculescu Alexandra-Christine
 
